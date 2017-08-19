@@ -5,3 +5,9 @@ alert("Load content");
 var element = document.getElementById('main-text');
 
 element.innerHTML = 'New Value';
+
+//move the image
+var img=document.getElementbyId("img");
+img.onCLick = function() {
+    img.style=marginLeft = '100px';
+}
