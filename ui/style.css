@@ -1,7 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: white;
-    margin-top: 75px;
+    margin-top: 60px;
 }
 
 .center {
@@ -13,10 +12,19 @@ body {
 }
 
 .bold {
-    font-weight: bold;
+        font-weight: bold;
 }
 
 .img-medium {
     height: 2000px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #746161;
+    font-family: sans-serif;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
