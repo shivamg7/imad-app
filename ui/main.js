@@ -42,8 +42,7 @@ button.onclick = function() {
 };
 
 //submit name
-var nameInput=document.getElementById("name");
-var name = nameInput.value;
+
 var submit = document.getElementById("submit_btn");
 submit.onclick = function() {
     //Make a request to the server and send the name
@@ -72,6 +71,8 @@ submit.onclick = function() {
         //Not done yet
     };
     //Make the request
+    var nameInput=document.getElementById("name");
+var name = nameInput.value;
         request.open('GET','http://shivamxav.imad.hasura-app.io/submit-name?name='+name,true);
         request.send(null);
     //Capture a list of names and render it as a list
