@@ -108,6 +108,18 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var names = [];
+app.get("/submit-name/:name", function( req, res){
+
+    //get the name from the request
+    var name=req.params.name; //todo
+    names.push(name);
+    //JSON - JAvascript object notation, which converts js objects into string
+    res.send(JSON.stringify(names));
+    // How does this make sense, we cannot send a javascript array, res can only send bytes of data, like strings.
+
+})
+
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
