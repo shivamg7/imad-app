@@ -109,13 +109,13 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names = [];
-app.get("/submit-name/:name", function( req, res){
+app.get("/submit-name", function( req, res){ //changing :name to ?. now URL /submit-name?name=abc 
 
     //get the name from the request
-    var name=req.params.name; //todo
+    var name=req.query.name; //changing params to query the morgam package enables us to get the query abject
     names.push(name);
     //JSON - JAvascript object notation, which converts js objects into string
-    res.send(JSON.stringify(names));
+    res.send(JSON.stringify(names));// we are sending back imformation as a string using json
     // How does this make sense, we cannot send a javascript array, res can only send bytes of data, like strings.
 
 })
