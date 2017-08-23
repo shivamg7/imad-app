@@ -87,6 +87,18 @@ app.get("/counter", function (req, res)
     res.send(counter.toString());
 })
 
+var names = [];
+app.get("/submit-name", function( req, res){ //changing :name to ?. now URL /submit-name?name=abc 
+
+    //get the name from the request
+    var name=req.query.name; //changing params to query the morgam package enables us to get the query abject
+    names.push(name);
+    //JSON - JAvascript object notation, which converts js objects into string
+    res.send(JSON.stringify(names));// we are sending back imformation as a string using json
+    // How does this make sense, we cannot send a javascript array, res can only send bytes of data, like strings.
+
+})
+
 app.get('/:articleName',function (req, res) {
         //articleName == article-one
         //articles[articleName]== {} content objects for article one
@@ -108,17 +120,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names = [];
-app.get("/submit-name", function( req, res){ //changing :name to ?. now URL /submit-name?name=abc 
 
-    //get the name from the request
-    var name=req.query.name; //changing params to query the morgam package enables us to get the query abject
-    names.push(name);
-    //JSON - JAvascript object notation, which converts js objects into string
-    res.send(JSON.stringify(names));// we are sending back imformation as a string using json
-    // How does this make sense, we cannot send a javascript array, res can only send bytes of data, like strings.
-
-})
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
