@@ -120,7 +120,7 @@ app.get("/submit-name", function( req, res){ //changing :name to ?. now URL /sub
     res.send(JSON.stringify(names));// we are sending back imformation as a string using json
     // How does this make sense, we cannot send a javascript array, res can only send bytes of data, like strings.
 
-})
+});
 
 app.get('/article/:articleName',function (req, res) {
         //articleName == article-one
@@ -132,7 +132,7 @@ app.get('/article/:articleName',function (req, res) {
                 res.status(500).send(err, toString());
             }
             else {
-                if(result.rows.length == 0) {
+                if(result.rows.length === 0) {
                     res.status(404).send("Article Not Found");
                 }
                 else {
@@ -140,7 +140,7 @@ app.get('/article/:articleName',function (req, res) {
                     res.send(createTemplate(articleData));
                 }
             }
-        })
+        });
     
         });
 
