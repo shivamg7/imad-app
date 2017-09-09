@@ -140,7 +140,7 @@ app.get('/articles/:articleName',function (req, res) {
         
         pool.query("SELECT * FROM article WHERE title = " + req.params.articleName, function(err, result) {
             if(err) {
-                alert('Error generated');
+                window.alert('Error generated');
                 res.status(500).send(err, toString());
             }
             else {
