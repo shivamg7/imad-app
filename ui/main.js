@@ -105,4 +105,29 @@ button4.onclick = function() {
     request.send(null);
 };
 
+var button5 = document.getElementById("counter3");
+
+button5.onclick = function() {
+    //Create a request object
+    var request =  new XMLHttpRequest();
+    //Capture the response and store it in a variable
+    
+    
+    request.onreadystatechange = function() {
+        if(request.readyState == XMLHttpRequest.DONE)
+        {
+            //Take some action
+            if(request.status==200)
+            {
+                var counter=request.responseText;
+                var span=document.getElementById("count5");
+                span.innerHTML = counter.toString();
+            }
+        }
+        //Not done yet
+    };
+    //Make the request
+    request.open('GET','http://shivamxav.imad.hasura-app.io/counter5',true);
+    request.send(null);
+};
 
