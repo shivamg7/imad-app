@@ -33,6 +33,13 @@ app.get("/counter4", function (req, res)
         counter4=counter4+1;
         res.send(counter4.toString());
         });
+        
+        var counter5=0;
+app.get("/counter5", function (req, res)
+        {
+        counter5=counter5+1;
+        res.send(counter5.toString());
+        });
 
 
 app.get('/', function (req, res) {
