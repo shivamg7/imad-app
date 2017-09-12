@@ -20,7 +20,7 @@ button1.onclick = function() {
         //Not done yet
     };
     //Make the request
-    request.open('GET','http://localhost:8080/counter1',true);
+    request.open('GET','http://shivamxav.imad.hasura-app.io/counter1',true);
     request.send(null);
 };
 
@@ -47,7 +47,7 @@ button2.onclick = function() {
         //Not done yet
     };
     //Make the request
-    request.open('GET','http://localhost:8080/counter2',true);
+    request.open('GET','http://shivamxav.imad.hasura-app.io/counter2',true);
     request.send(null);
 };
 
@@ -74,7 +74,7 @@ button3.onclick = function() {
         //Not done yet
     };
     //Make the request
-    request.open('GET','http://localhost:8080/counter3',true);
+    request.open('GET','http://shivamxav.imad.hasura-app.io/counter3',true);
     request.send(null);
 };
 
@@ -101,7 +101,7 @@ button4.onclick = function() {
         //Not done yet
     };
     //Make the request
-    request.open('GET','http://localhost:8080/counter4',true);
+    request.open('GET','http://shivamxav.imad.hasura-app.io/counter4',true);
     request.send(null);
 };
 
