@@ -105,7 +105,7 @@ button4.onclick = function() {
     request.send(null);
 };
 
-var button5 = document.getElementById("counter3");
+var button5 = document.getElementById("counter5");
 
 button5.onclick = function() {
     //Create a request object
