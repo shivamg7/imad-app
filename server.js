@@ -126,6 +126,7 @@ app.get("/submit-name", function( req, res){ //changing :name to ?. now URL /sub
 
     //get the name from the request
     var name=req.query.name; //changing params to query the morgam package enables us to get the query abject
+    console.log(name);
     names.push(name);
     //JSON - JAvascript object notation, which converts js objects into string
     res.send(JSON.stringify(names));// we are sending back imformation as a string using json
