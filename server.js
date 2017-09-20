@@ -94,12 +94,12 @@ var pool = new Pool(config);
 app.get('/test-db', function(req, res) {
     // select request 
     // return a response with the results
-    pool.query('SELECT * FROM TEST', function (err, result) {
+    pool.query('SELECT * FROM test', function (err, result) {
         if(err) {
             res.status(500).send(err, toString());
         }
         else {
-            res.send(JSON.stringify("FUCK OFF"));
+            res.send(JSON.stringify(result));
         }
     });
 });
